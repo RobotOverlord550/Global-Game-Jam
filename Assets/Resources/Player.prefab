@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 719416383468622760}
   - component: {fileID: 2733881558486071465}
   - component: {fileID: 8032715540310497710}
+  - component: {fileID: -932232534569412439}
+  - component: {fileID: -4985889483505303249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -309,3 +311,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-932232534569412439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046294458986690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a90b92e03441514aba6c47a0110582a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codeGenerationId: 1
+  animatorSyncSupport:
+    keys: []
+    values: []
+  RemotelyControlledByAuthorityId: 0
+  IsRigidBodyOwnerOnlyControlled: 0
+  ShouldHideDuringRemoteInstantiate: 0
+  IsPositionSyncd: 0
+  IsRotationSyncd: 0
+  designTimeLocation: project://Assets/Resources/Player.prefab
+--- !u!114 &-4985889483505303249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046294458986690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9272ba79ce5cde748921d55c62398c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTickReceiver: 0
