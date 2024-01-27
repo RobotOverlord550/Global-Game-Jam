@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject _player;
+    GameObject _player;
+
+    private void Awake()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void Update()
     {
