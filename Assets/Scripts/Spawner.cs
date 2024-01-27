@@ -42,6 +42,8 @@ public class Spawner : GONetBehaviour
     {
         base.OnGONetParticipantEnabled(gonetParticipant);
 
+        gonetParticipant.gameObject.GetComponent<Stick>().goNetParticipant = gonetParticipant;
+
         if (IsServer)
         {
             if (gonetParticipant.GetComponent<PlayerController>())
