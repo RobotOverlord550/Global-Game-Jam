@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CollisionAudio : MonoBehaviour
 {
-    [SerializeField] AudioManager _audioManager;
     [SerializeField] float minSpaceBetweenClips;
 
+    AudioManager _audioManager;
     float clipTimer = 0;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

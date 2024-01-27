@@ -6,17 +6,18 @@ using UnityEngine;
 
 public class Stick : MonoBehaviour
 {
-    [SerializeField] Camera _camera;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float rotDampTime;
     [SerializeField] float rotDampSpeed;
 
+    Camera _camera;
     float av = 0;
     PInput _pInput;
     
     private void Awake()
     {
         _pInput = new PInput();
+        _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     private void OnEnable()
