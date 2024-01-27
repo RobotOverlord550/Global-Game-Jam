@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 173995962}
+    - target: {fileID: 6917093565189538148, guid: e4695ea5d2e57374b855a05553401b4d, type: 3}
+      propertyPath: designTimeLocation
+      value: scene://Main Scene/Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
