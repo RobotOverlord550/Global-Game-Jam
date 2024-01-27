@@ -141,9 +141,11 @@ GameObject:
   - component: {fileID: 4336117214871573183}
   - component: {fileID: 2215369881996003828}
   - component: {fileID: 6148119868781451213}
-  - component: {fileID: 719416383468622760}
   - component: {fileID: 2733881558486071465}
+  - component: {fileID: 4028759372270864140}
   - component: {fileID: 8032715540310497710}
+  - component: {fileID: 2024648833015709230}
+  - component: {fileID: 676627178921470354}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,24 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509ffb3624c4d7145bfd8796c9baf6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
   _rb: {fileID: 2733881558486071465}
   rotDampTime: 0.01
   rotDampSpeed: 10000
---- !u!114 &719416383468622760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5046294458986690375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03574f88f0d85d445b8168969121bd04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioManager: {fileID: 0}
-  minSpaceBetweenClips: 0
 --- !u!50 &2733881558486071465
 Rigidbody2D:
   serializedVersion: 4
@@ -276,6 +263,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4028759372270864140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046294458986690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0339fb7005914592b36848b139332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpaceBetweenClips: 0.1
 --- !u!58 &8032715540310497710
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -311,3 +311,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2024648833015709230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046294458986690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a90b92e03441514aba6c47a0110582a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codeGenerationId: 1
+  animatorSyncSupport:
+    keys: []
+    values: []
+  RemotelyControlledByAuthorityId: 0
+  IsRigidBodyOwnerOnlyControlled: 0
+  ShouldHideDuringRemoteInstantiate: 0
+  IsPositionSyncd: 1
+  IsRotationSyncd: 1
+  designTimeLocation: project://Assets/Resources/Player.prefab
+--- !u!114 &676627178921470354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046294458986690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9272ba79ce5cde748921d55c62398c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTickReceiver: 0
