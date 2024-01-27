@@ -8,6 +8,8 @@ public class Stick : MonoBehaviour
 {
     [SerializeField] Camera _camera;
     [SerializeField] Rigidbody2D _rb;
+    [SerializeField] float rotDampTime;
+    [SerializeField] float rotDampSpeed;
 
     float av = 0;
     PInput _pInput;
@@ -42,7 +44,7 @@ public class Stick : MonoBehaviour
         if (direction.magnitude > 0.1f)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            _rb.MoveRotation(angle);
+            _rb.MoveRotation(Mathf.SmoothDampAngle(_rb.rotation, angle, ref av, rotDampTime, rotDampSpeed));
         }
     }
 }
