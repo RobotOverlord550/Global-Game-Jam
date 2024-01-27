@@ -404,7 +404,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768025784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -951,6 +951,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641877279}
     m_Modifications:
+    - target: {fileID: -932232534569412439, guid: 8d678a52257de5d4aa67a2cff9d4a9d9, type: 3}
+      propertyPath: designTimeLocation
+      value: scene://Working Emma/---Kinetic---/Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2733881558486071465, guid: 8d678a52257de5d4aa67a2cff9d4a9d9, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -1001,7 +1005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8032715540310497710, guid: 8d678a52257de5d4aa67a2cff9d4a9d9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
