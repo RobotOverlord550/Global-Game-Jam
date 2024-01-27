@@ -37,9 +37,9 @@ public class Stick : MonoBehaviour
         Vector2 mousePosition = _pInput.Player.Mouse.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = _camera.ScreenToWorldPoint(mousePosition);
         Vector3 direction = mouseWorldPosition - transform.position;
-        direction.z = 0f; // Make sure z-component is zero since we're working in 2D
+        direction.z = 0f;
 
-        if (direction.magnitude > 0.1f) // Check if mouse is not too close to the object to avoid division by zero
+        if (direction.magnitude > 0.1f)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             _rb.MoveRotation(angle);
