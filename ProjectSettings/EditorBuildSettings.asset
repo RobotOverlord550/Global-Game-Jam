@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage Select.unity
     guid: 35ceb67018664bb42bb5b8d294287283
+  - enabled: 1
+    path: Assets/Scenes/Chaos.unity
+    guid: 01cf80e8681056944a64eb37ce066ecf
   m_configObjects: {}
