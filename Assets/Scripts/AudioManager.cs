@@ -35,4 +35,9 @@ public class AudioManager : MonoBehaviour
     {
         
     }
+
+    public void PlayCollision()
+    {
+
+    }
 }

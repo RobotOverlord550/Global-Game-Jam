@@ -18,7 +18,7 @@ public class CollisionAudio : MonoBehaviour
     {
         if(clipTimer <= 0)
         {
-            _audioManager.playCollison();
+            _audioManager.PlayCollision();
             clipTimer = minSpaceBetweenClips;
         }
     }
