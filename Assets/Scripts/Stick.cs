@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Stick : MonoBehaviour
+public class Stick : GONetBehaviour
 {
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float rotDampTime;

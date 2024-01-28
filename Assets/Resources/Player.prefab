@@ -334,7 +334,6 @@ MonoBehaviour:
   _rb: {fileID: 2733881558486071465}
   rotDampTime: 0.01
   rotDampSpeed: 10000
-  goNetParticipant: {fileID: 0}
 --- !u!50 &2733881558486071465
 Rigidbody2D:
   serializedVersion: 4

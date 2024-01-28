@@ -1,6 +1,10 @@
 project://Assets/GONet/Resources/GONet/GONet_GlobalContext.prefab
 project://Assets/GONet/Resources/GONet/GONet_LocalContext.prefab
 project://Assets/GONet/Sample/Projectile/Resources/CannonBall.prefab
+project://Assets/Prefabs/Basic Stuff.prefab
+project://Assets/Resources/Player.prefab
+scene://Basic Scene/Basic Stuff/GONet_GlobalContext
+scene://Basic Scene/Player (1)
 scene://Main Scene/Player
 scene://ProjectileTest/GONet_GlobalContext
 scene://SampleScene/---Util---/GONet_GlobalContext
