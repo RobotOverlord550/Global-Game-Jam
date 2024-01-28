@@ -5,6 +5,9 @@ using UnityEngine;
 public class Spinner : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public int spinny;
+    
     void Start()
     {
         PolygonCollider2D colide = GetComponent<PolygonCollider2D>();
@@ -26,6 +29,6 @@ public class Spinner : MonoBehaviour
     {
         GameObject player = collision.gameObject;
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        rb.AddForce(-400 * (this.transform.position - player.transform.position));
+        rb.AddForce(spinny * (this.transform.position - player.transform.position));
     }
 }
