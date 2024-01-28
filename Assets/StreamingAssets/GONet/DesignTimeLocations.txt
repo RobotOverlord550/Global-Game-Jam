@@ -14,6 +14,6 @@ scene://Basic Scene/GONet_GlobalContext
 scene://Main Scene/Player
 scene://No Items/GONet_GlobalContext
 scene://ProjectileTest/GONet_GlobalContext
-scene://SampleScene/---Util---/GONet_GlobalContext
-scene://Towers/GONet_GlobalContext
-scene://Towers/Player (1)
+scene://SampleScene/GONet_GlobalContext
+scene://SampleScene/Mouse
+scene://SampleScene/Player
