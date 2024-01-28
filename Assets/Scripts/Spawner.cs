@@ -10,7 +10,7 @@ public class Spawner : GONetBehaviour
 
     
     //sets which of the spawnPoints to use
-    public Transform[] spawnPoints;
+    public GameObject[] spawnPoints;
 
 
     //
@@ -25,6 +25,10 @@ public class Spawner : GONetBehaviour
 
         if (isClient)
         {
+            if (SelectStage.chaos)
+            {
+                RandomizeSpawn();
+            }
             Instantiate(playerPrefab);
             EventBus.Subscribe<AssignSpawnpointEvent>(ClientProcessAssignment);
         }
@@ -32,10 +36,22 @@ public class Spawner : GONetBehaviour
 
     private void ClientProcessAssignment(GONetEventEnvelope<AssignSpawnpointEvent> eventEnvelope)
     {
-        clientMyPlayer.transform.position = spawnPoints[eventEnvelope.Event.spawnpointassignment].position; 
+        clientMyPlayer.transform.position = spawnPoints[eventEnvelope.Event.spawnpointassignment].transform.position;
     }
 
-   
+   private void RandomizeSpawn()
+    {
+        foreach (GameObject gameObject in spawnPoints)
+        {
+            Collider2D collider = gameObject.GetComponent<CircleCollider2D>();
+            ContactFilter2D filter = new ContactFilter2D().NoFilter();
+            List<Collider2D> results = new List<Collider2D>();
+            do
+            {
+                gameObject.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-4f, 4f));
+            } while (collider.OverlapCollider(filter, results) > 0);
+        }
+    }
     
 
     public override void OnGONetParticipantEnabled(GONetParticipant gonetParticipant)
