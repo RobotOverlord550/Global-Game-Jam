@@ -1,6 +1,7 @@
 project://Assets/GONet/Resources/GONet/GONet_GlobalContext.prefab
 project://Assets/GONet/Resources/GONet/GONet_LocalContext.prefab
 project://Assets/GONet/Sample/Projectile/Resources/CannonBall.prefab
+project://Assets/Prefabs/Basic Stuff.prefab
 project://Assets/Resources/Player.prefab
 <<<<<<< Updated upstream
 =======
@@ -9,4 +10,4 @@ scene://No Items/Player (1)
 scene://No Items/Player (2)
 >>>>>>> Stashed changes
 scene://ProjectileTest/GONet_GlobalContext
-scene://SampleScene/GONet_GlobalContext
+scene://SampleScene/Basic Stuff/GONet_GlobalContext

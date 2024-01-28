@@ -1,15 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource _audioSource;
-    [SerializeField] List<AudioClip> _collisionClips = new List<AudioClip>();
-
-    public void playCollison()
+    private static AudioManager instance;
+    public AudioSource menuMusic;
+    public AudioSource battleMusic;
+    public static AudioManager Instance
     {
-        _audioSource.PlayOneShot(_collisionClips[Random.Range(0, _collisionClips.Count - 1)]);
+        get
+        {
+            if (instance == null)
+            {
+                Debug.Log("No sound");
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        menuMusic.Play();
+        menuMusic.loop = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

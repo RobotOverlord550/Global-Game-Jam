@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
+    public float bounceForce = 400;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,6 @@ public class Bounce : MonoBehaviour
     {
         GameObject player = collision.gameObject;
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        rb.AddForce(-400 * (this.transform.position - player.transform.position));
+        rb.AddForce(-bounceForce * (this.transform.position - player.transform.position));
     }
 }

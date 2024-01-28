@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
   _collisionClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9b06aa7d193f6bf418a56a50c8faab8d, type: 3}
+  - {fileID: 8300000, guid: afe98732224ea984398cd34e920e8a34, type: 3}
+  - {fileID: 8300000, guid: 0cbda8437c955ad40a968f0817ccfde2, type: 3}
+  - {fileID: 8300000, guid: ae61704c223e28b47a6dafdce54170e4, type: 3}
+  - {fileID: 8300000, guid: 4c8366bd0c28dc84c971efb50292ab49, type: 3}
+  - {fileID: 8300000, guid: 20c326036a20b094ca2085d34cb7a47f, type: 3}
