@@ -522,9 +522,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8163478073945491759, guid: 580d96bdbd5aaab458d1c60e41312f37, type: 3}
     - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
+      propertyPath: _mousePrefab
+      value: 
+      objectReference: {fileID: 7006457815823884855, guid: 331e8c93b57588d4cb418170d4c90dea, type: 3}
+    - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 8163478073945491759, guid: 580d96bdbd5aaab458d1c60e41312f37, type: 3}
+    - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
+      propertyPath: _playerPrefab
+      value: 
+      objectReference: {fileID: -939380838687145627, guid: 580d96bdbd5aaab458d1c60e41312f37, type: 3}
     - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 2
