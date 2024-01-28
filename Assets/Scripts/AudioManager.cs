@@ -22,12 +22,14 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this);
     }
     // Start is called before the first frame update
     void Start()
     {
         menuMusic.Play();
         menuMusic.loop = true;
+        battleMusic.Stop();
     }
 
     // Update is called once per frame

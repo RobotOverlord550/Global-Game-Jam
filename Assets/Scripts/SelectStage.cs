@@ -21,30 +21,42 @@ public class SelectStage : MonoBehaviour
     {
         chaos = true;
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 
     public void OnBasic()
     {
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 
     public void OnPirate()
     {
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 
     public void OnBBBB()
     {
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 
     public void OnStar()
     {
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 
     public void On911()
     {
         SceneManager.LoadScene("Chaos");
+        AudioManager.Instance.menuMusic.Stop();
+        AudioManager.Instance.battleMusic.Play();
     }
 }

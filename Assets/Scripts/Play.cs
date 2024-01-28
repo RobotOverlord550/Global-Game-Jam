@@ -22,8 +22,6 @@ public class Play : MonoBehaviour
     public void OnPlay()
     {
         SceneManager.LoadScene("Stage Select");
-        AudioManager.Instance.menuMusic.Stop();
-        AudioManager.Instance.battleMusic.Play();
     }
 
     public void OnSettings()
