@@ -233,9 +233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509ffb3624c4d7145bfd8796c9baf6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTickReceiver: 0
   _rb: {fileID: 2733881558486071465}
   rotDampTime: 0.01
   rotDampSpeed: 10000
+  goNetParticipant: {fileID: 0}
 --- !u!50 &2733881558486071465
 Rigidbody2D:
   serializedVersion: 4
