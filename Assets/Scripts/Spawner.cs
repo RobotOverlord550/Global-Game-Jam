@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Spawner : GONetBehaviour
 {
-    public GONetParticipant playerPrefab;
+    public GONetParticipant PlayerPrefab;
 
     
     //sets which of the spawnPoints to use
@@ -25,7 +25,7 @@ public class Spawner : GONetBehaviour
 
         if (isClient)
         {
-            Instantiate(playerPrefab);
+            Instantiate(PlayerPrefab);
             EventBus.Subscribe<AssignSpawnpointEvent>(ClientProcessAssignment);
         }
     }
@@ -41,8 +41,6 @@ public class Spawner : GONetBehaviour
     public override void OnGONetParticipantEnabled(GONetParticipant gonetParticipant)
     {
         base.OnGONetParticipantEnabled(gonetParticipant);
-
-        gonetParticipant.gameObject.GetComponent<Stick>().goNetParticipant = gonetParticipant;
 
         if (IsServer)
         {

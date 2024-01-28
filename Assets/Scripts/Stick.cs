@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Stick : GONetBehaviour
-
+public class Stick : MonoBehaviour
 {
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float rotDampTime;
@@ -15,7 +14,6 @@ public class Stick : GONetBehaviour
     Camera _camera;
     float av = 0;
     PInput _pInput;
-    public GONetParticipant goNetParticipant;
 
     private void Awake()
     {
@@ -40,7 +38,7 @@ public class Stick : GONetBehaviour
 
     void HandleStickMovement()
     {
-        if (goNetParticipant.IsMine)
+        if (GetComponent<GONetParticipant>().IsMine)
         {
             Vector2 mousePosition = _pInput.Player.Mouse.ReadValue<Vector2>();
             Vector3 mouseWorldPosition = _camera.ScreenToWorldPoint(mousePosition);
