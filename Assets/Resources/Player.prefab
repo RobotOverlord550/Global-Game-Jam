@@ -234,8 +234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mouse: {fileID: 0}
   _rb: {fileID: 2733881558486071465}
-  _rotDampTime: 0.1
-  _rotDampSpeed: 1000
+  _rotDampTime: 0.01
+  _rotDampSpeed: 3000
   jumpForce: 100
 --- !u!50 &2733881558486071465
 Rigidbody2D:

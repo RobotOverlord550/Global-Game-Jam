@@ -50,7 +50,6 @@ public class Spawner : GONetBehaviour
             {
                 GONetParticipant player = Instantiate(_playerPrefab);
                 player.GetComponent<Player>().Mouse = gonetParticipant.gameObject;
-                gonetParticipant.gameObject.GetComponent<Mouse>().player = player.gameObject;
             }
         }else if (IsClient)
         {
