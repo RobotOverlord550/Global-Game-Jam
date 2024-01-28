@@ -6,6 +6,7 @@ public class MapSpawner : MonoBehaviour
 {
     public GameObject wall;
     public GameObject bouncer;
+    public GameObject[] spawnPoints;
     private float wall_x;
     private float wall_y;
     // Start is called before the first frame update
@@ -26,11 +27,30 @@ public class MapSpawner : MonoBehaviour
             GameObject bounc = Instantiate(bouncer);
             bounc.transform.position = new Vector2(Random.Range(-6f, 6f), Random.Range(-4f, 4f));
         }
+        foreach (var spawnPoint in spawnPoints)
+        {
+            GameObject spawn = Instantiate(spawnPoint);
+            spawn.transform.position = spawnPoint.transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    private void RandomizeSpawn()
+    {
+        foreach (GameObject gameObject in spawnPoints)
+        {
+            Collider2D collider = gameObject.GetComponent<CircleCollider2D>();
+            ContactFilter2D filter = new ContactFilter2D().NoFilter();
+            List<Collider2D> results = new List<Collider2D>();
+            do
+            {
+                gameObject.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-4f, 4f));
+            } while (collider.OverlapCollider(filter, results) > 0);
+        }
     }
 }
