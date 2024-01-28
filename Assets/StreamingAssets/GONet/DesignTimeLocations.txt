@@ -10,6 +10,8 @@ project://Assets/GONet/Sample/Projectile/Resources/CannonBall.prefab
 project://Assets/Resources/Mouse.prefab
 project://Assets/Resources/Player.prefab
 scene://B B B B/GONet_GlobalContext
+scene://B B B B/Mouse (1)
+scene://B B B B/Player (1)
 scene://Basic Scene/GONet_GlobalContext
 scene://Main Scene/Player
 scene://No Items/GONet_GlobalContext
