@@ -46,10 +46,11 @@ public class Spawner : GONetBehaviour
                 ServerSendPlayerSpawnPoint(serverPlayerCount, gonetParticipant);
                 serverPlayerCount++;
             }
-            if (gonetParticipant.GetComponent<FollowMouse>())
+            if (gonetParticipant.GetComponent<Mouse>())
             {
                 GONetParticipant player = Instantiate(_playerPrefab);
-                player.GetComponent<Stick>().Mouse = gonetParticipant.gameObject;
+                player.GetComponent<Player>().Mouse = gonetParticipant.gameObject;
+                gonetParticipant.gameObject.GetComponent<Mouse>().player = player.gameObject;
             }
         }else if (IsClient)
         {
@@ -69,7 +70,7 @@ public class Spawner : GONetBehaviour
                 }
 
             }
-            if (gonetParticipant.GetComponent<Stick>())
+            if (gonetParticipant.GetComponent<Player>())
             {
                 gonetParticipant.GetComponent<Rigidbody2D>().isKinematic = true;
             }

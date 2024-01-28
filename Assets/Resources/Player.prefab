@@ -97,10 +97,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5503043, y: -0.0074701607}
+  m_Offset: {x: 0.003226459, y: -0.0038364902}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09939146, y: 0.27549678}
+  m_Size: {x: 1.206453, y: 0.09865768}
   m_EdgeRadius: 0
 --- !u!1 &5046294458986690375
 GameObject:
@@ -229,13 +229,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5046294458986690375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509ffb3624c4d7145bfd8796c9baf6e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 404be7be5779da54db0b53ec533ad39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Mouse: {fileID: 0}
   _rb: {fileID: 2733881558486071465}
   _rotDampTime: 0.1
   _rotDampSpeed: 1000
+  jumpForce: 100
 --- !u!50 &2733881558486071465
 Rigidbody2D:
   serializedVersion: 4
