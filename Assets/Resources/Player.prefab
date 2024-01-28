@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404be7be5779da54db0b53ec533ad39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mouse: {fileID: 0}
+  Mouse: {fileID: 1149270024828139018, guid: 331e8c93b57588d4cb418170d4c90dea, type: 3}
   _rb: {fileID: 2733881558486071465}
   _rotDampTime: 0.1
   _rotDampSpeed: 1000

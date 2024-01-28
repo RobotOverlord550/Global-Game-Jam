@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Premade Maps/No Items.unity
     guid: 646ff9f4321e2604da58ffc940886444
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Premade Maps/B B B B.unity
     guid: ceabe53308d64f34e987be92b7a449e1
+  - enabled: 1
+    path: Assets/Scenes/Premade Maps/Towers.unity
+    guid: 6d01ab79770c9724cbc1815f48a045e4
   m_configObjects: {}
