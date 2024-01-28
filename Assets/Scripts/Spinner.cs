@@ -10,7 +10,7 @@ public class Spinner : MonoBehaviour
         PolygonCollider2D colide = GetComponent<PolygonCollider2D>();
         ContactFilter2D filter = new ContactFilter2D().NoFilter();
         List<Collider2D> results = new List<Collider2D>();
-        if (colide.OverlapCollider(filter, results) > 0 && !SelectStage.chaos)
+        if (colide.OverlapCollider(filter, results) > 0 && SelectStage.chaos)
         {
             Destroy(this.gameObject);
         }

@@ -29,7 +29,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnBasic()
     {
-        SceneManager.LoadScene("Chaos");
+        SceneManager.LoadScene("Basic Map");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
@@ -38,7 +38,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnPirate()
     {
-        SceneManager.LoadScene("Chaos");
+        SceneManager.LoadScene("Piracy");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
@@ -47,7 +47,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnBBBB()
     {
-        SceneManager.LoadScene("Chaos");
+        SceneManager.LoadScene("BBBB");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
@@ -56,7 +56,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnStar()
     {
-        SceneManager.LoadScene("Chaos");
+        SceneManager.LoadScene("Star Street");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
@@ -65,7 +65,7 @@ public class SelectStage : MonoBehaviour
 
     public void On911()
     {
-        SceneManager.LoadScene("Chaos");
+        SceneManager.LoadScene("Two Towers");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
