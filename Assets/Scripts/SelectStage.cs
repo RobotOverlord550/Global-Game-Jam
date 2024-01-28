@@ -23,6 +23,8 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 
     public void OnBasic()
@@ -30,6 +32,8 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 
     public void OnPirate()
@@ -37,6 +41,8 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 
     public void OnBBBB()
@@ -44,6 +50,8 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 
     public void OnStar()
@@ -51,6 +59,8 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 
     public void On911()
@@ -58,5 +68,7 @@ public class SelectStage : MonoBehaviour
         SceneManager.LoadScene("Chaos");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
+        AudioManager.Instance.battleMusic.loop = true;
+        AudioManager.Instance.battleMusic.volume = AudioManager.Instance.musicVol;
     }
 }
