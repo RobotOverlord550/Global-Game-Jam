@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class Spawner : GONetBehaviour
 {
-    public GONetParticipant playerPrefab;
+    public GONetParticipant _mousePrefab;
+    public GONetParticipant _playerPrefab;
 
-    
-    //sets which of the spawnPoints to use
-    public GameObject[] spawnPoints;
+    public Transform[] spawnPoints;
 
-
-    //
     private int serverPlayerCount = 0;
 
     private PlayerController clientMyPlayer;
@@ -25,48 +22,35 @@ public class Spawner : GONetBehaviour
 
         if (isClient)
         {
-            if (SelectStage.chaos)
-            {
-                RandomizeSpawn();
-            }
-            Instantiate(playerPrefab);
+            Instantiate(_mousePrefab);
             EventBus.Subscribe<AssignSpawnpointEvent>(ClientProcessAssignment);
         }
     }
 
     private void ClientProcessAssignment(GONetEventEnvelope<AssignSpawnpointEvent> eventEnvelope)
     {
-        clientMyPlayer.transform.position = spawnPoints[eventEnvelope.Event.spawnpointassignment].transform.position;
+        clientMyPlayer.transform.position = spawnPoints[eventEnvelope.Event.spawnpointassignment].position; 
     }
 
-   private void RandomizeSpawn()
-    {
-        foreach (GameObject gameObject in spawnPoints)
-        {
-            Collider2D collider = gameObject.GetComponent<CircleCollider2D>();
-            ContactFilter2D filter = new ContactFilter2D().NoFilter();
-            List<Collider2D> results = new List<Collider2D>();
-            do
-            {
-                gameObject.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-4f, 4f));
-            } while (collider.OverlapCollider(filter, results) > 0);
-        }
-    }
+   
     
 
     public override void OnGONetParticipantEnabled(GONetParticipant gonetParticipant)
     {
         base.OnGONetParticipantEnabled(gonetParticipant);
 
-        gonetParticipant.gameObject.GetComponent<Stick>().goNetParticipant = gonetParticipant;
-
         if (IsServer)
         {
             if (gonetParticipant.GetComponent<PlayerController>())
             {
-
                 ServerSendPlayerSpawnPoint(serverPlayerCount, gonetParticipant);
                 serverPlayerCount++;
+            }
+            if (gonetParticipant.GetComponent<Mouse>())
+            {
+                GONetParticipant player = Instantiate(_playerPrefab);
+                player.GetComponent<Player>().Mouse = gonetParticipant.gameObject;
+                gonetParticipant.gameObject.GetComponent<Mouse>().player = player.gameObject;
             }
         }else if (IsClient)
         {
@@ -81,10 +65,14 @@ public class Spawner : GONetBehaviour
                 }
                 else
                 {
-                    Rigidbody2D rigidComponent = playerController.GetComponent<Rigidbody2D>();
-                    rigidComponent.isKinematic= true;
+                    //Rigidbody2D rigidComponent = playerController.GetComponent<Rigidbody2D>();
+                    //rigidComponent.isKinematic= true;
                 }
 
+            }
+            if (gonetParticipant.GetComponent<Player>())
+            {
+                gonetParticipant.GetComponent<Rigidbody2D>().isKinematic = true;
             }
 
         }
