@@ -29,7 +29,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnBasic()
     {
-        SceneManager.LoadScene("Basic Map");
+        SceneManager.LoadScene("Basic");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;

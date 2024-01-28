@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Working Emma.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: abf115ad744c7ee4c919b003b02f6f8c
   - enabled: 0
@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Premade Maps/B B B B.unity
     guid: ceabe53308d64f34e987be92b7a449e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Premade Maps/Towers.unity
     guid: 6d01ab79770c9724cbc1815f48a045e4
+  - enabled: 1
+    path: Assets/Scenes/Premade Maps/Basic.unity
+    guid: e00b3767bf6f0234caf05f193c4a667f
   m_configObjects: {}

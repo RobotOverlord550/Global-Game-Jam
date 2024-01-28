@@ -11,6 +11,7 @@ project://Assets/Resources/Mouse.prefab
 project://Assets/Resources/Player.prefab
 scene://B B B B/GONet_GlobalContext
 scene://Basic Scene/GONet_GlobalContext
+scene://Basic/GONet_GlobalContext
 scene://Main Scene/Player
 scene://No Items/GONet_GlobalContext
 scene://ProjectileTest/GONet_GlobalContext
