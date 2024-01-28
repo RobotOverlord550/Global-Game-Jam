@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lockRotation : MonoBehaviour
+public class LockRotation : MonoBehaviour
 {
-    private void Update()
-    {
-        handleFollowPlayer();
-    }
-    void handleFollowPlayer()
+    void Update()
     {
         transform.eulerAngles = Vector3.zero;
     }
