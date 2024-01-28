@@ -17,3 +17,4 @@ scene://ProjectileTest/GONet_GlobalContext
 scene://SampleScene/GONet_GlobalContext
 scene://SampleScene/Mouse
 scene://SampleScene/Player
+scene://Towers/GONet_GlobalContext
