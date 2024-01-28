@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class Spawner : GONetBehaviour
 {
-    public GONetParticipant playerPrefab;
+    public GONetParticipant _mousePrefab;
+    public GONetParticipant _playerPrefab;
 
-    
-    //sets which of the spawnPoints to use
     public Transform[] spawnPoints;
 
-
-    //
     private int serverPlayerCount = 0;
 
     private PlayerController clientMyPlayer;
@@ -25,7 +22,7 @@ public class Spawner : GONetBehaviour
 
         if (isClient)
         {
-            Instantiate(playerPrefab);
+            Instantiate(_mousePrefab);
             EventBus.Subscribe<AssignSpawnpointEvent>(ClientProcessAssignment);
         }
     }
@@ -46,9 +43,13 @@ public class Spawner : GONetBehaviour
         {
             if (gonetParticipant.GetComponent<PlayerController>())
             {
-
                 ServerSendPlayerSpawnPoint(serverPlayerCount, gonetParticipant);
                 serverPlayerCount++;
+            }
+            if (gonetParticipant.GetComponent<FollowMouse>())
+            {
+                GONetParticipant player = Instantiate(_playerPrefab);
+                player.GetComponent<Stick>().Mouse = gonetParticipant.gameObject;
             }
         }else if (IsClient)
         {
@@ -63,10 +64,14 @@ public class Spawner : GONetBehaviour
                 }
                 else
                 {
-                    Rigidbody2D rigidComponent = playerController.GetComponent<Rigidbody2D>();
-                    rigidComponent.isKinematic= true;
+                    //Rigidbody2D rigidComponent = playerController.GetComponent<Rigidbody2D>();
+                    //rigidComponent.isKinematic= true;
                 }
 
+            }
+            if (gonetParticipant.GetComponent<Stick>())
+            {
+                gonetParticipant.GetComponent<Rigidbody2D>().isKinematic = true;
             }
 
         }

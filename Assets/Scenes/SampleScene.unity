@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 306441575}
   m_Layer: 0
   m_Name: Point 1
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +427,6 @@ GameObject:
   - component: {fileID: 923055314}
   - component: {fileID: 923055317}
   - component: {fileID: 923055316}
-  - component: {fileID: 923055315}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -450,18 +449,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403241351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &923055315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923055313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96aa3a837027e3f4caa7d2ca249ed071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &923055316
 AudioListener:
   m_ObjectHideFlags: 0
@@ -565,7 +552,7 @@ GameObject:
   - component: {fileID: 1070999340}
   m_Layer: 0
   m_Name: Point 2
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,9 +1308,17 @@ PrefabInstance:
       value: Game Manager
       objectReference: {fileID: 0}
     - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
+      propertyPath: _mousePrefab
+      value: 
+      objectReference: {fileID: 7006457815823884855, guid: 331e8c93b57588d4cb418170d4c90dea, type: 3}
+    - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
       propertyPath: playerPrefab
       value: 
-      objectReference: {fileID: -932232534569412439, guid: 580d96bdbd5aaab458d1c60e41312f37, type: 3}
+      objectReference: {fileID: 7006457815823884855, guid: 331e8c93b57588d4cb418170d4c90dea, type: 3}
+    - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
+      propertyPath: _playerPrefab
+      value: 
+      objectReference: {fileID: -939380838687145627, guid: 580d96bdbd5aaab458d1c60e41312f37, type: 3}
     - target: {fileID: 6721301499171830877, guid: b798fe7310187154c859365cdb6ee627, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 2
