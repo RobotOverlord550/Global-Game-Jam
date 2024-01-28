@@ -10,6 +10,7 @@ public class Spawner : GONetBehaviour
     public GONetParticipant _playerPrefab;
 
     public Transform[] spawnPoints;
+    public Transform[] playerIcons;
 
     private int serverPlayerCount = 0;
 
