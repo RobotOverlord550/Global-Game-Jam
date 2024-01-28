@@ -16,7 +16,7 @@ public class Spawner : GONetBehaviour
     //
     private int serverPlayerCount = 0;
 
-    private PlayerController clientMyPlayer;
+    private Stick clientMyPlayer;
 
     public override void OnGONetClientVsServerStatusKnown(bool isClient, bool isServer, ushort myAuthorityId)
     {
@@ -26,13 +26,16 @@ public class Spawner : GONetBehaviour
         if (isClient)
         {
             Instantiate(PlayerPrefab);
+            Debug.Log("Person Created");
             EventBus.Subscribe<AssignSpawnpointEvent>(ClientProcessAssignment);
+            Debug.Log("Person Placed on spawnpoint");
         }
     }
 
     private void ClientProcessAssignment(GONetEventEnvelope<AssignSpawnpointEvent> eventEnvelope)
     {
         clientMyPlayer.transform.position = spawnPoints[eventEnvelope.Event.spawnpointassignment].position;
+        Debug.Log("Spawning stuff");
     }
 
 
@@ -44,23 +47,24 @@ public class Spawner : GONetBehaviour
 
         if (IsServer)
         {
-            if (gonetParticipant.GetComponent<PlayerController>())
+            if (gonetParticipant.GetComponent<Stick>())
             {
 
                 ServerSendPlayerSpawnPoint(serverPlayerCount, gonetParticipant);
                 serverPlayerCount++;
+                Debug.Log("Server Player Count Updated");
                 // when spawning more than two players, reset back to first spot
-                if (serverPlayerCount >= 2)
-                {
-                    serverPlayerCount = 0;
-                }
+                //if (serverPlayerCount >= 2)
+                //{
+                  //  serverPlayerCount = 0;
+                //}
             }
         }
         else if (IsClient)
         {
-            if (gonetParticipant.GetComponent<PlayerController>())
+            if (gonetParticipant.GetComponent<Stick>())
             {
-                PlayerController playerController = gonetParticipant.GetComponent<PlayerController>();
+                Stick playerController = gonetParticipant.GetComponent<Stick>();
 
                 if (gonetParticipant.IsMine)
                 {
@@ -85,6 +89,8 @@ public class Spawner : GONetBehaviour
         spawningEvent.spawnpointassignment = serverPlayerCount;
 
         EventBus.Publish(spawningEvent, targetClientAuthorityId: gonetParticipant.OwnerAuthorityId);
+
+        Debug.Log("Just published");
     }
 
 
