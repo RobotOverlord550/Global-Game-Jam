@@ -47,7 +47,7 @@ public class SelectStage : MonoBehaviour
 
     public void OnBBBB()
     {
-        SceneManager.LoadScene("BBBB");
+        SceneManager.LoadScene("B B B B");
         AudioManager.Instance.menuMusic.Stop();
         AudioManager.Instance.battleMusic.Play();
         AudioManager.Instance.battleMusic.loop = true;
